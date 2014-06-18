@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<title>Scrumboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+
+
+    <script data-main="js/main.js" src="js/libs/require/require.min.js"></script>
+</head>
+<body>
+    <!-- MODAL Dialog -->
+    <div id="createTask" class="modal fade">
+    </div>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Scrumboard</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+		<div id="scrum-app" class="container">
+			<div class="row">
+
+                <div class="col-md-4">
+                    <div class="panel panel-warning scrum-column">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Todo</h3>
+                        </div>
+                        <div class="scrum-drop panel-body">
+                            <ul id="scrum-todo" class="scrum-tasks list-group">
+                                <img class="loader" src="images/loader.gif">
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default btn-xs createTask" data-toggle="modal" data-target="#createTask" data-state="todo">Add new task</button>
+                        </div>
+                    </div>
+		        </div>
+
+                <div class="col-md-4">
+                    <div class="panel panel-info scrum-column">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">In progress</h3>
+                        </div>
+                        <div class="scrum-drop panel-body">
+                            <ul id="scrum-progress" class="scrum-tasks list-group">
+                                <img class="loader" src="images/loader.gif">
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default btn-xs createTask" data-toggle="modal" data-target="#createTask" data-state="progress">Add new task</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="panel panel-success scrum-column">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Done</h3>
+                        </div>
+                        <div class="scrum-drop panel-body">
+                            <ul id="scrum-done" class="scrum-tasks list-group">
+                                <img class="loader" src="images/loader.gif">
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <button class="btn btn-default btn-xs createTask" data-toggle="modal" data-target="#createTask" data-state="done">Add new task</button>
+                        </div>
+                    </div>
+                </div>
+
+			</div>
+		</div>
+	</div>
+</body>
+</html>

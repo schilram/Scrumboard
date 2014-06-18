@@ -1,0 +1,31 @@
+body {
+  padding-top: 50px;
+}
+.content {
+  padding: 40px 15px;
+}
+.loader {
+  opacity: 0.75;
+  display: block;
+  margin: auto;
+}
+.scrum-column {
+  opacity: 1;
+}
+.scrum-column-active {
+  opacity: 0.75;
+}
+.scrum-tasks {
+  margin-bottom: 0;
+}
+.scrum-tasks .scrum-task {
+  word-wrap: break-word;
+}
+.scrum-tasks .scrum-task h3 {
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.scrum-tasks .scrum-task .footer {
+  margin-top: 10px;
+}

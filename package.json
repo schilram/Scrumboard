@@ -1,0 +1,18 @@
+{
+  "name": "Scrumboard",
+  "description": "Scrumboard nodejs Project",
+  "version": "0.0.2",
+  "private": true,
+  "engines":{
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "express": "3.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/schilram/scrumboard.git"
+  },
+  "main": "app.js",
+  "author": "Ramon Schilling"
+}

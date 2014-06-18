@@ -1,0 +1,14 @@
+<li class="scrum-task list-group-item" draggable="true">
+    <div>
+        <span class="badge pull-right"><%= estimate %></span>
+        <h3><%= title %></h3>
+    </div>
+    <p><%= description %></p>
+    <div class="footer">
+        <span class="label label-default"><%= owner %></span>
+        <div class="btn-group pull-right">
+            <button id="task-edit" type="button" class="btn btn-default btn-xs" data-toggle="modal" data-target="#createTask">Edit</button>
+            <button id="task-delete" type="button" class="btn btn-default btn-xs">Delete</button>
+        </div>
+    </div>
+</li>
