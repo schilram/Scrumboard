@@ -1,0 +1,94 @@
+%----------------------------------------------------------------------------------------
+% Instructions:
+% Compile using LaTeX and XeLaTeX
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,aps,secnumarabic,balancelastpage,nofootinbib]{revtex4}
+
+% Documentclass Options
+    % aps, prl stand for American Physical Society and Physical Review Letters respectively
+    % twocolumn permits two columns, of course
+    % nobalancelastpage doesn't attempt to equalize the lengths of the two columns on the last page
+        % as might be desired in a journal where articles follow one another closely
+    % amsmath and amssymb are necessary for the subequations environment among others
+    % secnumarabic identifies sections by number to aid electronic review and commentary.
+    % nofootinbib forces footnotes to occur on the page where they are first referenced
+        % and not in the bibliography
+    % REVTeX 4 is a set of macro packages designed to be used with LaTeX 2e.
+        % REVTeX is well-suited for preparing manuscripts for submission to APS journals.
+
+
+\usepackage[german]{babel}
+\usepackage[babel,german=swiss]{csquotes}
+\usepackage{chapterbib}    % allows a bibliography for each chapter (each labguide has it's own)
+\usepackage{color}         % produces boxes or entire pages with colored backgrounds
+\usepackage{graphics}      % standard graphics specifications
+\usepackage[pdftex]{graphicx}      % alternative graphics specifications
+\usepackage{longtable}     % helps with long table options
+\usepackage{epsf}          % old package handles encapsulated post script issues
+\usepackage{bm}            % special 'bold-math' package
+%\usepackage{asymptote}     % For typesetting of mathematical illustrations
+\usepackage{thumbpdf}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{hyperref}
+	\hypersetup{hidelinks=true}	% Hide boxes arond links
+\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+
+\usepackage[draft=false, debug=false]{hyperref}
+\hypersetup{
+	pdfauthor={Ramon Schilling},
+	pdftitle={ZHAW Web Technologies and Engineering},
+	colorlinks,%
+    citecolor=black,%
+    filecolor=black,%
+    linkcolor=black,%
+    urlcolor=black
+}
+\usepackage[paper=a4paper]{geometry}
+
+
+%\title{\vspace{-1cm}\Large{\sffamily Web Projekt Scrumboard} \Tiny{\author{\sffamily Jan Humbel}}}
+
+\begin{document}
+
+\title{Scrum Board}
+\author{Ramon Schilling}
+%\date{\today}
+\affiliation{ZHAW Studiengang Informatik - Web Technologies and Engineering}
+\maketitle
+
+\section{Aufgabe}
+Das Ziel des Projekts ist ein Tool zu entwickeln, um ein einfaches Scrum Board verwalten zu können.
+Das Scrumboard muss aus den Spalten Todo, In Progress und Done bestehen.
+
+In jeder Spalte muss man Karten (welche Tasks beschreiben) hinzufügen, bearbeiten und löschen können. Ausserdem müssen die Karten zwischen den verschiedenen Spalten verschoben werden können.\\
+
+Jede Karte, bzw. Task muss folgende Eigenschaften aufweisen: Titel, Beschreibung, Aufwandschätzung (1, 2, 3, 5 oder 8), Name der verantwortlichen Person.
+
+\section{verwendete Techologien/Frameworks/Libraries}
+
+\subsection{Backend}
+Das Backend wurde mit Node.js und Express wie in der Vorlesung behandelt realisiert.
+\begin{description}
+\item[Node.js] ist ein serverseitige Platform zum Betrieb von Netzwerkanwendungen, welche auf der JavaScript runtime von Chrome basiert. Die Website von Node.js ist unter \url{http://nodejs.org/} abrufbar.
+\item[Express] ist ein Framework für node.js um einfach Webapplikationen zu erstellen. Die Website von Express ist unter \url{http://expressjs.com/} erreichbar.
+\end{description}
+
+\subsection{Frontend}
+Für das Frontend habe ich auf folgende Frameworks/Libraries zurückgegriffen.
+\begin{description}
+\item[RequireJS] ist eine Open-Source-Implementierung für asynchrone Moduldefinition in JavaScript. Es dient dazu JavaScript-Dateien nicht beim Öffnen einer Webseite, sondern erst wenn diese benötigt werden zu laden. Zudem enthält es ein Optimierungswerkzeug um minimierte JavaScript-Dateien zu erstellen um das Laden von Webseiten zu beschleunigen. Unter \url{http://requirejs.org} ist die Website von RequireJS verfügbar.
+\item[Backbone.js] ist eine JavaScript-Bibliothek mit RESTful-JSON-Schnittstelle. Backbone basiert auf MVC-Pattern.  Unter \url{http://backbonejs.org} ist die Website von Backbone.js abrufbar. Einzige Abhängikeit von Backbone.js ist Underscore.js (\url{http://underscorejs.org}).
+\item[Backbone.Validation] ist ein Validierungsplugin für Backbone.js. Es ist unter \url{http://http://thedersen.com/projects/backbone-validation/} erhältlich
+\item[Bootstrap] ist ein häufig verwendetes CSS Framework und unter \url{http://http://getbootstrap.com/} erhältlich.
+\end{description}
+
+\subsection{Github und Heroku}
+Die Applikation ist auf Github unter \url{https://github.com/schilram/Scrumboard} zu finden.\\
+Ausserdem ist die Applikaiton auf Heroku deployed und unter \url{http://desolate-atoll-9574.herokuapp.com/} erreichbar.
+
+\end{document}
